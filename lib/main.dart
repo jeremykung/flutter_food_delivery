@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_input/pages/todo_page.dart';
+import 'package:flutter_input/themes/theme_provier.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => ThemeProvider(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
